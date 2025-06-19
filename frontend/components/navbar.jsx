@@ -8,7 +8,7 @@ function NavBar() {
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white z-50">
+    <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-lg">
       <div className="flex justify-between items-center px-4 py-6">
         <h1 className="text-4xl font-semibold cursor-pointer select-none">Questlytics</h1>
 
@@ -23,9 +23,9 @@ function NavBar() {
 
       <div className={`overflow-hidden transition-all duration-500 md:hidden ${isMenuOpen ? 'max-h-[300px] py-4 px-4' : 'max-h-0 py-0 px-4'}`}>
         <div className="space-y-4 flex flex-col items-center">
-          <p className="cursor-pointer mt-[1vh] underline underline-offset-4 decoration-1 font-medium">
+          <a href='#box-container'><p className="cursor-pointer mt-[1vh] underline underline-offset-4 decoration-1 font-medium">
             Overview
-          </p>
+          </p></a>
           <a
             href="https://github.com/NivinLouis/Questlytics"
             target="_blank"

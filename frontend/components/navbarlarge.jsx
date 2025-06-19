@@ -3,10 +3,10 @@ import { Github } from 'lucide-react'
 
 function NavBarLarge() {
     return (
-        <div className='flex justify-between items-center px-4 py-6 mx-auto fixed top-0 left-0 w-full bg-white z-50'>
+        <div className='flex justify-between items-center px-4 py-6 mx-auto fixed top-0 left-0 w-full bg-white z-50 shadow-lg'>
             <h1 className='text-4xl font-semibold cursor-pointer select-none'>Questlytics</h1>
             <div className='flex gap-[30px] items-center'>
-                <p className='font-medium underline underline-offset-4 decoration-1 select-none'>Overview</p>
+                <a href='#box-container'><p className='font-medium underline underline-offset-4 decoration-1 select-none'>Overview</p></a>
                 <a
                     href="https://github.com/NivinLouis/Questlytics"
                     target="_blank"
