@@ -10,13 +10,13 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 800,       // animation duration
-      once: true,          // whether animation should happen only once
+      once: false,          // whether animation should happen only once
       offset: 100,         // offset (in px) from the original trigger point
     });
   }, []);
 
   return (
-    <>
+    <div>
       <div className='block md:hidden'>
         <NavBar /> {/*mobile navbar*/}
       </div>
@@ -25,7 +25,7 @@ function App() {
         <NavBarLarge />
       </div>
       
-      <div data-aos="fade-down" className='w-[95vw] mx-auto mt-25'>
+      <div data-aos="fade-down" className='w-[95vw] mt-[25vh] mx-auto'>
         <h1 className='text-6xl font-bold w-[330px] text-center mx-auto'>Understand what to<br/>Study</h1>
         <p className='text-[24px] text-center mx-auto m-[50px] text-[#575757] w-[90%] md:w-[40vw]'>Your personal exam strategy assistant, powered by AI and  past question papers.</p>
         <div className='flex justify-center'>
@@ -37,7 +37,7 @@ function App() {
       </div>
 
 
-      <div className="space-y-4 w-[90vw] mx-auto mb-[50px] flex flex-col gap-[15px] md:w-[30vw]">
+      <div id='box-container' className="space-y-4 w-[90vw] mx-auto mb-[50px] flex flex-col gap-[15px] md:w-[30vw]">
         <div data-aos="fade-up" className="border border-[#E5E7EB] p-4 pl-[30px] pr-[30px] rounded-md shadow-lg md:flex md:items-center">
           <CloudUpload className='mb-[10px] md:w-[100px] md:h-[50px] md:mr-[30px] md:mb-0'/>
           <div>
@@ -69,7 +69,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
